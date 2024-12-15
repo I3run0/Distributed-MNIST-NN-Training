@@ -1,0 +1,60 @@
+/home/cesar.carneiro/projeto-final-parallel-mnist/ompcluster
+[sorgan-cpu1:1740839:0:1740906] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:1740906) ====
+ 0 0x0000000000042520 __sigaction()  ???:0
+ 1 0x0000000000228194 EventSystemTy::getNewEventComm()  crtstuff.c:0
+ 2 0x0000000000220cd5 _ZN13EventSystemTy11createEventIPF7EventTy19MPIRequestManagerTyPvEJS3_EQsr3stdE9invocableIT_S2_DpT0_EEES1_S6_11EventTypeTyiS8_.resume()  rtl.cpp:0
+ 3 0x000000000022443c EventTy::wait()  crtstuff.c:0
+ 4 0x0000000000213806 llvm::omp::target::plugin::MPIPluginTy::data_notify_unmapped()  crtstuff.c:0
+ 5 0x00000000000f5036 DeviceTy::notifyDataUnmapped()  crtstuff.c:0
+ 6 0x000000000011ee9e MappingInfoTy::deallocTgtPtrAndEntry()  crtstuff.c:0
+ 7 0x000000000010c984 std::_Function_handler<int (), targetDataEnd(ident_t*, DeviceTy&, int, void**, void**, long*, long*, void**, void**, AsyncInfoTy&, bool)::$_0>::_M_invoke()  omptarget.cpp:0
+ 8 0x00000000000fd06c AsyncInfoTy::synchronize()  crtstuff.c:0
+ 9 0x00000000000f7486 targetData<TaskAsyncInfoWrapperTy>()  interface.cpp:0
+10 0x00000000000f79f8 __tgt_target_data_end_nowait_mapper()  ???:0
+11 0x0000000000002d1d .omp_task_entry..16()  mnist.c:0
+12 0x000000000006afbf __kmp_invoke_task()  kmp_tasking.cpp:0
+13 0x000000000006e701 __kmp_execute_tasks_64<false, true>()  crtstuff.c:0
+14 0x000000000007cc83 kmp_flag_64<false, true>::wait()  crtstuff.c:0
+15 0x0000000000077ab6 __kmp_hyper_barrier_release()  kmp_barrier.cpp:0
+16 0x000000000007baaa __kmp_fork_barrier()  crtstuff.c:0
+17 0x000000000004babd __kmp_launch_thread()  crtstuff.c:0
+18 0x00000000000adf58 __kmp_launch_worker()  z_Linux_util.cpp:0
+19 0x0000000000094ac3 pthread_condattr_setpshared()  ???:0
+20 0x0000000000125bf4 clone()  ???:0
+=================================
+Attempting to use an MPI routine (internal_Testall) before initializing or after finalizing MPICH
+Attempting to use an MPI routine (internal_Testall) before initializing or after finalizing MPICH
+free(): corrupted unsorted chunks
+Attempting to use an MPI routine (internal_Testall) before initializing or after finalizing MPICH
+Attempting to use an MPI routine (internal_Testall) before initializing or after finalizing MPICH
+Attempting to use an MPI routine (internal_Testall) before initializing or after finalizing MPICH
+[sorgan-cpu1:1741446:1:1741569] Caught signal 11 (Segmentation fault: Sent by the kernel at address (nil))
+==== backtrace (tid:1741569) ====
+ 0 0x0000000000042520 __sigaction()  ???:0
+ 1 0x00000000000453fc secure_getenv()  ???:0
+ 2 0x0000000000045610 exit()  ???:0
+ 3 0x0000000000203d86 MPIR_Err_Uninitialized()  :0
+ 4 0x00000000000e9a17 MPI_Testall()  ???:0
+ 5 0x0000000000228755 MPIRequestManagerTy::wait()  EventSystem.cpp:0
+ 6 0x000000000022443c EventTy::wait()  crtstuff.c:0
+ 7 0x0000000000213806 llvm::omp::target::plugin::MPIPluginTy::data_notify_unmapped()  crtstuff.c:0
+ 8 0x00000000000f5036 DeviceTy::notifyDataUnmapped()  crtstuff.c:0
+ 9 0x000000000011ee9e MappingInfoTy::deallocTgtPtrAndEntry()  crtstuff.c:0
+10 0x000000000010c984 std::_Function_handler<int (), targetDataEnd(ident_t*, DeviceTy&, int, void**, void**, long*, long*, void**, void**, AsyncInfoTy&, bool)::$_0>::_M_invoke()  omptarget.cpp:0
+11 0x00000000000fd06c AsyncInfoTy::synchronize()  crtstuff.c:0
+12 0x00000000000f7486 targetData<TaskAsyncInfoWrapperTy>()  interface.cpp:0
+13 0x00000000000f79f8 __tgt_target_data_end_nowait_mapper()  ???:0
+14 0x0000000000002d1d .omp_task_entry..16()  mnist.c:0
+15 0x000000000006afbf __kmp_invoke_task()  kmp_tasking.cpp:0
+16 0x000000000006e701 __kmp_execute_tasks_64<false, true>()  crtstuff.c:0
+17 0x000000000007cc83 kmp_flag_64<false, true>::wait()  crtstuff.c:0
+18 0x0000000000077ab6 __kmp_hyper_barrier_release()  kmp_barrier.cpp:0
+19 0x000000000007baaa __kmp_fork_barrier()  crtstuff.c:0
+20 0x000000000004babd __kmp_launch_thread()  crtstuff.c:0
+21 0x00000000000adf58 __kmp_launch_worker()  z_Linux_util.cpp:0
+22 0x0000000000094ac3 pthread_condattr_setpshared()  ???:0
+23 0x0000000000125bf4 clone()  ???:0
+=================================
+slurmstepd-sorgan-cpu1: error: *** JOB 9194 ON sorgan-cpu1 CANCELLED AT 2024-12-10T23:36:42 ***
+slurmstepd-sorgan-cpu1: error: *** STEP 9194.3 ON sorgan-cpu1 CANCELLED AT 2024-12-10T23:36:42 ***

@@ -1,0 +1,4 @@
+/.vscode/
+/mnist
+/data/upscaled_datasets/*
+/.venv/*

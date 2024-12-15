@@ -1,0 +1,2 @@
+slurmstepd-sorgan-cpu1: error: *** STEP 9189.3 ON sorgan-cpu1 CANCELLED AT 2024-12-10T23:00:05 ***
+slurmstepd-sorgan-cpu1: error: *** JOB 9189 ON sorgan-cpu1 CANCELLED AT 2024-12-10T23:00:05 ***

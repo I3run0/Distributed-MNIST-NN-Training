@@ -1,0 +1,4 @@
+Binary,Nodes,Final Accuracy,Total Duration,Mean Iteration Time
+mnist-1x,1,0.262600,59.770902,0.597709
+mnist-2x,1,0.417300,229.044488,2.290445
+mnist-4x,1,0.597300,917.592695,9.175927

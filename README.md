@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/mo652-24s2/projeto-final-parallel-mnist/blob/main/mnist.png">
+  <img src="https://github.com/I3run0/Distributed-MNIST-NN-Training/blob/main/mnist.png">
 </p>
 
 # DISTRIBUTED MNIST NEURAL NETWORK TRAINING
